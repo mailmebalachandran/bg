@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "balachandran",
-    "slug": "balachandran",
+    "name": "bg",
+    "slug": "bg",
     "platforms": [
       "ios",
       "android",
@@ -12,7 +12,7 @@
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -23,6 +23,10 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.bg.bg",
+      "versionCode": 1
     }
   }
 }
