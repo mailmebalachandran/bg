@@ -11,7 +11,6 @@ import Axios from "axios";
 import Datatable from "../common/Datatable";
 import { Grid, Col, Row } from "react-native-easy-grid";
 import Header from "../common/Header";
-import LoadingIndicator from "../common/LoadingIndicator";
 import { ActivityIndicator, Colors } from "react-native-paper";
 
 const Dashboard = (props) => {
@@ -109,6 +108,10 @@ const Dashboard = (props) => {
     });
   };
 
+  gotoWorldDetail = () =>{
+    props.navigation.navigate("World");
+  }
+
   return (
     <View>
       <ScrollView style={{ backgroundColor: "#fff5fd" }}>
@@ -117,6 +120,8 @@ const Dashboard = (props) => {
         <Header
           navigation={props.navigation}
           headerDetails="State Wise Details - India"
+          handler ={() => {gotoWorldDetail()}}
+          type="world"
         />
         <TouchableWithoutFeedback onPress={() => refreshHandler()}>
           <View

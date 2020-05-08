@@ -116,6 +116,10 @@ const StateWiseDetails = (props) => {
     setDistrictWiseData(sortedActiveData);
   };
 
+  gotoWorldDetail = () =>{
+    props.navigation.navigate("World");
+  }
+
   let wholeview = [];
   if (props.route.params !== undefined) {
     if (isReady) {
@@ -132,6 +136,8 @@ const StateWiseDetails = (props) => {
                   : ""}
               </Text>
             }
+            handler ={() => {gotoWorldDetail()}}
+            type="world"
           />
           <View style={{ margin: 15 }}>
             <DataTable>
